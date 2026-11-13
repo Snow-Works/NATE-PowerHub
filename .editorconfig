@@ -1,0 +1,18 @@
+# Purpose: make every editor use the same basic whitespace rules.
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_style = space
+indent_size = 2
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.md]
+# Two trailing spaces can mean a line break in Markdown, so do not trim them.
+trim_trailing_whitespace = false
+
+[*.py]
+# Python's community standard is 4 spaces.
+indent_size = 4

@@ -1,0 +1,15 @@
+{
+  "name": "kelvinate-power-hub",
+  "version": "0.1.0",
+  "private": true,
+  "description": "KELVINATE Power Hub: power bank rental service monorepo (client, server, supabase, tools, docs).",
+  "scripts": {
+    "install:all": "npm --prefix client install && npm --prefix server install",
+    "dev:client": "npm --prefix client run dev",
+    "dev:server": "npm --prefix server run dev",
+    "lint": "npm --prefix client run lint && npm --prefix server run lint",
+    "format": "npm --prefix client run format && npm --prefix server run format",
+    "format:check": "npm --prefix client run format:check && npm --prefix server run format:check",
+    "test": "npm --prefix server run test"
+  }
+}

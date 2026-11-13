@@ -1,0 +1,28 @@
+# Purpose: keep secrets, installs and build output out of Git.
+
+# Dependencies
+node_modules/
+
+# Secrets: real env files are never committed. Only .env.example files are.
+.env
+.env.*
+!.env.example
+
+# Build output and tooling caches
+dist/
+coverage/
+.vercel/
+.eslintcache
+
+# Python virtual environment and bytecode (tools/ is dev-only)
+tools/.venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS and editor noise
+.DS_Store
