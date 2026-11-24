@@ -35,7 +35,7 @@ Then edit the two `.env` files. Real `.env` files are git-ignored and must never
 Run these in two separate terminals:
 
 ```zsh
-npm run dev:server   # API on http://localhost:4000 (default PORT)
+npm run dev:server   # API on http://localhost:4100 (default PORT)
 npm run dev:client   # React app on http://localhost:5173
 ```
 

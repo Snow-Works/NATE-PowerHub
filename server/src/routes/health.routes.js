@@ -1,5 +1,5 @@
 /**
- * Purpose: system routes that every deployment needs (health check now, server time in a moment).
+ * Purpose: system routes that every deployment needs (health check and server time).
  * Mounted under /api by app.js.
  */
 import { Router } from 'express';
@@ -12,6 +12,10 @@ router.get('/health', (req, res) => {
   res.json({ data: { status: 'ok', time: new Date().toISOString() } });
 });
 
-// TODO(your turn): add GET /time returning { data: { server_now: '<ISO UTC>' } } here.
+// The client uses this to work out how far its clock is from the server's,
+// so countdowns (holds, rental timers) never depend on the device clock alone.
+router.get('/time', (req, res) => {
+  res.json({ data: { server_now: new Date().toISOString() } });
+});
 
 export default router;
